@@ -54,6 +54,14 @@ Route::group(['middleware' => ['login']], function () {
 			Route::post('/setSort', 'RoleController@setSort')->name('admin.role.setSort');//更新排序
 			Route::match(['get', 'post'],'/power', 'RoleController@power')->name('admin.role.power');//分配权限
 		});
+
+		Route::prefix('summary')->group(function () {
+			Route::get('/', 'SummaryController@index')->name('admin.summary.index');//生产资料汇总表
+			Route::match(['get', 'post'],'/create', 'SummaryController@create')->name('admin.summary.create');//添加记录
+			Route::match(['get', 'post'],'/update', 'SummaryController@update')->name('admin.summary.update');//修改记录
+			Route::post('/setData', 'SummaryController@setData')->name('admin.summary.setData');//设置参数
+			Route::get('/excel/down', 'SummaryController@excelDown')->name('admin.summary.excelDown');//excel下载
+		});
 	});
 });
 

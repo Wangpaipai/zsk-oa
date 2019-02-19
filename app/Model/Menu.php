@@ -65,7 +65,7 @@ class Menu extends Model
 	public function getMenuFind($id)
 	{
 		$field = [
-			'id','name','sort','status'
+			'id','name','sort','status','icon'
 		];
 		return $this->where('id',$id)->select($field)->first();
 	}
