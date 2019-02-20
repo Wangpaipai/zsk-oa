@@ -4,7 +4,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button aria-hidden="true" data-dismiss="modal" class="close" type="button">×</button>
-                    <h4 class="modal-title">设置流水 &nbsp;&nbsp;&nbsp; 订单编号:<span id="contract_no"></span></h4>
+                    <h4 class="modal-title">设置价格 &nbsp;&nbsp;&nbsp; 订单编号:<span id="contract_no"></span></h4>
                 </div>
                 <div class="modal-body">
                     <input type="hidden" id="salary_id" value="">

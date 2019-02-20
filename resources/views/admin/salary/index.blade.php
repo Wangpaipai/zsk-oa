@@ -108,7 +108,7 @@
                                                             <td>
                                                                 @if(in_array('admin.salary.createDetail',$jur))
                                                                     <a href="#myModal" data-toggle="modal" data-id="{{ $value->id }}" data-no="{{ $value->contract_no }}" class="btn btn-info btn-xs createDetail" style="color: #fff">
-                                                                        <i class="fa fa-pencil">&nbsp;</i>流水
+                                                                        <i class="fa fa-pencil">&nbsp;</i>价格
                                                                     </a>
                                                                 @endif
                                                             </td>

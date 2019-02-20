@@ -2,22 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483d6f7a-1f2a-437c-9c65-cba2df1814c5" name="默认的" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SalaryDetailController.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Model/SalaryAccount.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Model/SalaryDetail.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/config/letter.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Admin/SummaryController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Admin/SummaryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Summary.php" afterPath="$PROJECT_DIR$/app/Model/Summary.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.lock" afterPath="$PROJECT_DIR$/composer.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/app.php" afterPath="$PROJECT_DIR$/config/app.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/summary/create.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/summary/create.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/summary/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/summary/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/summary/update.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/summary/update.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/admin.php" afterPath="$PROJECT_DIR$/routes/admin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php" />
     </list>
     <ignored path="Deliver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,11 +25,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SalaryDetailController.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SalaryDetailController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SalaryDetailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.31986144">
-              <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+            <state vertical-scroll-proportion="-59.42857">
+              <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
               <folding>
                 <element signature="e#128#164#0#PHP" expanded="true" />
               </folding>
@@ -66,6 +52,51 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.928572">
               <caret line="107" column="74" selection-start-line="107" selection-start-column="62" selection-end-line="107" selection-end-column="74" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/index.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-23.535715">
+              <caret line="110" column="108" selection-start-line="110" selection-start-column="108" selection-end-line="110" selection-end-column="108" />
+              <folding>
+                <marker date="1550651738018" expanded="true" signature="11280:12024" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="11280:12240" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="11280:12290" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="11329:11450" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="11329:11529" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="11578:11779" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="11828:12022" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12071:12240" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12394:13029" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12394:13233" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12394:13279" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12439:12606" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12651:12820" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="12865:13027" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13072:13233" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13494:14021" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13494:14189" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13494:14223" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13527:13670" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13703:13848" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="13881:14019" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="14052:14154" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="14052:14155" placeholder="..." />
+                <marker date="1550651738018" expanded="true" signature="14052:14189" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="hide.blade.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.13163972">
+              <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -126,10 +157,10 @@
         <option value="$PROJECT_DIR$/resources/views/admin/summary/index.blade.php" />
         <option value="$PROJECT_DIR$/routes/admin.php" />
         <option value="$PROJECT_DIR$/app/Model/SalaryAccount.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php" />
         <option value="$PROJECT_DIR$/app/Model/SalaryDetail.php" />
-        <option value="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Admin/SalaryDetailController.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php" />
       </list>
     </option>
   </component>
@@ -979,52 +1010,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.107143">
-          <caret line="9" column="54" selection-start-line="9" selection-start-column="45" selection-end-line="9" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/SalaryAccount.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.285714">
           <caret line="29" column="20" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/index.blade.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43879908">
-          <caret line="81" column="64" selection-start-line="81" selection-start-column="64" selection-end-line="81" selection-end-column="64" />
-          <folding>
-            <marker date="1550650332403" expanded="true" signature="11280:12024" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="11280:12240" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="11280:12290" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="11329:11450" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="11329:11529" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="11578:11779" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="11828:12022" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12071:12240" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12394:13029" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12394:13233" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12394:13279" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12439:12606" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12651:12820" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="12865:13027" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13072:13233" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13494:14021" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13494:14189" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13494:14223" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13527:13670" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13703:13848" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="13881:14019" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="14052:14154" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="14052:14155" placeholder="..." />
-            <marker date="1550650332403" expanded="true" signature="14052:14189" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1054,11 +1044,52 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SalaryDetailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.31986144">
-          <caret line="120" column="18" selection-start-line="120" selection-start-column="18" selection-end-line="120" selection-end-column="18" />
+        <state vertical-scroll-proportion="-59.42857">
+          <caret line="103" column="19" selection-start-line="103" selection-start-column="19" selection-end-line="103" selection-end-column="19" />
           <folding>
             <element signature="e#128#164#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/index.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-23.535715">
+          <caret line="110" column="108" selection-start-line="110" selection-start-column="108" selection-end-line="110" selection-end-column="108" />
+          <folding>
+            <marker date="1550651738018" expanded="true" signature="11280:12024" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="11280:12240" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="11280:12290" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="11329:11450" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="11329:11529" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="11578:11779" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="11828:12022" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12071:12240" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12394:13029" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12394:13233" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12394:13279" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12439:12606" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12651:12820" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="12865:13027" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13072:13233" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13494:14021" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13494:14189" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13494:14223" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13527:13670" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13703:13848" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="13881:14019" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="14052:14154" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="14052:14155" placeholder="..." />
+            <marker date="1550651738018" expanded="true" signature="14052:14189" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/public/hide.blade.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.13163972">
+          <caret line="6" column="48" selection-start-line="6" selection-start-column="48" selection-end-line="6" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
