@@ -41,6 +41,10 @@
                                 <input type="text" class="form-control" name="contract_no" id="" placeholder="请输入合同编号" value="{{ $param['contract_no'] ?? '' }}">
                             </div>
                             <div class="form-group">
+                                <label class="sr-only" for="exampleInputEmail2">批次</label>
+                                <input type="text" class="form-control" name="batch" id="" placeholder="请输入批次" value="{{ $param['contract_no'] ?? '' }}">
+                            </div>
+                            <div class="form-group">
                                 <label class="sr-only" for="exampleInputPassword2">经销商</label>
                                 <input type="text" class="form-control"  name="dealer" id="" placeholder="请输入经销商姓名" value="{{ $param['dealer'] ?? '' }}">
                             </div>
@@ -50,9 +54,9 @@
                             </div>
                             <div class="form-group">
                                 <label class="sr-only" for="exampleInputPassword2">时间范围</label>
-                                <input type="text" class="form-control"  name="start_time" id="start" placeholder="请输入起始时间" value="{{ $param['start_time'] ?? '' }}">
+                                <input type="text" class="form-control"  name="start_time" id="start" autocomplete="off" placeholder="请输入起始时间" value="{{ $param['start_time'] ?? '' }}">
                                 -
-                                <input type="text" class="form-control"  name="end_time" id="end" placeholder="请输入终止时间" value="{{ $param['end_time'] ?? '' }}">
+                                <input type="text" class="form-control"  name="end_time" id="end" autocomplete="off" placeholder="请输入终止时间" value="{{ $param['end_time'] ?? '' }}">
                             </div>
                             <button type="submit" class="btn btn-primary">确定</button>
                             @include('admin.summary.public.hide')
@@ -141,20 +145,24 @@
                                             <td class="id">{{ $value->id }}</td>
                                             <td class="contract_no">{{ $value->contract_no }}</td>
                                             <td class="receipt_time">
-                                                {{ $value->receipt_time ? date('m/d',$value->order_time) : '未' }}
+                                                {{ $value->receipt_time ? date('n/j',$value->order_time) : '未' }}
                                             </td>
                                             <td class="order_time">
                                                 @if($value->order_time)
-                                                    {{ date('m/d',$value->order_time) }}
+                                                    {{ date('n/j',$value->order_time) }}
                                                 @else
-                                                    <a href="javascript:;" class="label label-info">设置</a>
+                                                    @if(in_array('admin.summary.setData',$jur))
+                                                        <a href="javascript:;" class="label label-info setData" data-id="{{ $value->id }}" data-type="time" data-key="order_time">设置</a>
+                                                    @else
+                                                        未
+                                                    @endif
                                                 @endif
                                             </td>
                                             <td class="batch">
                                                 @if($value->batch)
                                                     {{ $value->batch }}
-                                                @else
-                                                    <a href="javascript:;" class="label label-info">设置</a>
+                                                @elseif(in_array('admin.summary.setData',$jur))
+                                                    <a href="javascript:;" class="label label-info setData" data-id="{{ $value->id }}" data-type="batch" data-key="batch">设置</a>
                                                 @endif
                                             </td>
                                             <td class="order_inside_outside">{{ $value->order_inside_outside == 1 ? '内' : '外' }}</td>
@@ -183,18 +191,18 @@
                                             <td class="balance"></td>
                                             <td class="deduction">{{ $value->deduction }}</td>
                                             <td class="difference"></td>
-                                            <td class="pack_time">{{ $value->pack_time ? date('m/d',$value->pack_time) : '未' }}</td>
+                                            <td class="pack_time">{{ $value->pack_time ? date('n/j',$value->pack_time) : '未' }}</td>
                                             <td class="door_number">{{ $value->door_number }}</td>
                                             <td class="set_number">{{ $value->set_number }}</td>
                                             <td class="door_total">{{ $value->door_number + $value->set_number }}</td>
                                             <td class="depot">{{ $value->depot }}</td>
-                                            <td class="deliver_time">{{ $value->deliver_time ? date('m/d',$value->deliver_time) : '未' }}</td>
+                                            <td class="deliver_time">{{ $value->deliver_time ? date('n/j',$value->deliver_time) : '未' }}</td>
                                             <td class="logistics_company">{{ $value->logistics_company }}</td>
                                             <td class="logistics_no">{{ $value->logistics_no }}</td>
                                             <td class="remark">{{ $value->remark }}</td>
                                             <td>
                                                 @if(in_array('admin.summary.update',$jur))
-                                                    <a href="{{ route('admin.summary.update',['id'=>$value->id]) }}">
+                                                    <a href="{{ route('admin.summary.update',['id'=>$value->id,'back_url' => url()->current()]) }}">
                                                         <button class="btn btn-info btn-xs" type="button"><i class="fa fa-pencil">&nbsp;</i>编辑</button>
                                                     </a>
                                                 @endif
@@ -237,6 +245,64 @@
     <script>
 
         $(function(){
+            $('.setData').click(function(){
+                var key = $(this).attr('data-key');
+                var type = $(this).attr('data-type');
+                var id = $(this).attr('data-id');
+
+                var val = '';
+                var time = getTime();
+                switch(type){
+                    case 'time':
+                        val = time.y + '-' + time.m + '-' + time.d;
+                        break;
+                    case 'batch':
+                        val = time.m + '-';
+                        break;
+                }
+
+                var data = {};
+                data.key = key;
+                data.type = type;
+                data.id = id;
+                layer.prompt({
+                    formType: 0,
+                    value: val,
+                    title: '请输入值'
+                }, function(value, index, elem){
+                    layer.close(index);
+                    data.val = value;
+                    $.ajax({
+                        type:'POST',
+                        dataType:'json',
+                        url:'{{ route('admin.summary.setData') }}',
+                        data:data,
+                        async: true,
+                        success(data){
+                            layer.close(index);
+                            if(data.status){
+                                location.reload();
+                            }else{
+                                layer.open({
+                                    title: '提示',
+                                    icon: 2,
+                                    content: data.msg
+                                });
+                            }
+                        }
+                    })
+                });
+            });
+
+            function getTime(){
+                var data = {};
+                var myDate = new Date();
+                data.y = myDate.getFullYear();
+                data.m = myDate.getMonth() + 1;
+                data.d = myDate.getDate();
+                return data;
+            }
+
             $('.table-hide').each(function(){
                 if(!$(this).is(':checked')){
                     var val = $(this).val();

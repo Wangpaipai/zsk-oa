@@ -15,6 +15,8 @@ Route::group(['middleware' => ['login']], function () {
 
 	Route::match(['get', 'post'],'/data/update','AdminController@dataUpdate')->name('admin.data.update');//修改个人资料
 
+	Route::post('/salary/getAccount', 'SalaryDetailController@getAccount')->name('admin.salary.getAccount');//获取工序流水
+
 	//菜单列表中间件
 	Route::group(['middleware' => ['menu']], function () {
 		Route::get('/','IndexController@index')->name('admin.index.index');//首页
@@ -61,6 +63,13 @@ Route::group(['middleware' => ['login']], function () {
 			Route::match(['get', 'post'],'/update', 'SummaryController@update')->name('admin.summary.update');//修改记录
 			Route::post('/setData', 'SummaryController@setData')->name('admin.summary.setData');//设置参数
 			Route::get('/excel/down', 'SummaryController@excelDown')->name('admin.summary.excelDown');//excel下载
+		});
+
+		Route::prefix('salary')->group(function () {
+			Route::get('/', 'SalaryDetailController@index')->name('admin.salary.index');//工资明细
+			Route::post('/setData', 'SalaryDetailController@setData')->name('admin.salary.setData');//设置参数
+			Route::post('/createDetail', 'SalaryDetailController@createDetail')->name('admin.salary.createDetail');//添加明细
+			Route::get('/excelDown', 'SalaryDetailController@excelDown')->name('admin.salary.excelDown');//excel下载
 		});
 	});
 });

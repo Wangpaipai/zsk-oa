@@ -276,8 +276,8 @@
                             if(data.status){
                                 layer.msg(data.msg,{icon:1,time:1500});
                                 setTimeout(function(){
-                                    location.href = "{{ route('admin.summary.index') }}";
-                                },1500)
+                                    location.href = "{{ $param['back_url'] }}";
+                                },1000)
                             }else{
                                 layer.open({
                                     title: '提示',

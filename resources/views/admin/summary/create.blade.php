@@ -169,7 +169,7 @@
                             <div class="form-group">
                                 <label for="inputEmail1" class="col-lg-2 col-sm-2 control-label">折扣:</label>
                                 <div class="col-lg-10">
-                                    <input type="number" class="form-control" name="discount" placeholder="">
+                                    <input type="number" class="form-control" name="discount" placeholder="" value="1">
                                 </div>
                             </div>
                             <div class="form-group">
@@ -276,7 +276,7 @@
                                 layer.msg(data.msg,{icon:1,time:1500});
                                 setTimeout(function(){
                                     location.href = "{{ route('admin.summary.index') }}";
-                                },1500)
+                                },1000)
                             }else{
                                 layer.open({
                                     title: '提示',

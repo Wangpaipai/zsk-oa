@@ -77,6 +77,9 @@ class Summary extends Model
 			->when(isset($data['contract_no']) && $data['contract_no'],function($query)use($data){
 				$query->where('contract_no',$data['contract_no']);
 			})
+			->when(isset($data['batch']) && $data['batch'],function($query)use($data){
+				$query->where('batch',$data['batch']);
+			})
 			->when(isset($data['dealer']) && $data['dealer'],function($query)use($data){
 				$query->where('dealer',$data['dealer']);
 			})
@@ -84,9 +87,13 @@ class Summary extends Model
 				$query->where('manager',$data['manager']);
 			})
 			->when($data['start_time'] || $data['end_time'],function($query)use($data){
-				$query->whereBetween('order_time',[$data['start_time'],$data['end_time']]);
+				if($data['start_time'] && !$data['end_time']){
+					$query->where('receipt_time','>=',$data['start_time']);
+				}else{
+					$query->whereBetween('receipt_time',[$data['start_time'],$data['end_time']]);
+				}
 			})
-			->orderBy('order_time','desc')
+			->orderBy('receipt_time','desc')
 			->paginate(15);
 	}
 
@@ -101,5 +108,18 @@ class Summary extends Model
 	{
 		$data = $this->dataHandle($data);
 		return $this->where('id',$data['id'])->update($data);
+	}
+
+	/**
+	 * 自定义设置参数
+	 * Created by：Mp_Lxj
+	 * @date 2019/2/20 9:22
+	 * @param $data
+	 * @param $id
+	 * @return mixed
+	 */
+	public function setData($data,$id)
+	{
+		return $this->where('id',$id)->update($data);
 	}
 }
