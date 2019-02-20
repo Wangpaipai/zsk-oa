@@ -43,6 +43,10 @@
                                                     <input type="text" class="form-control" name="batch" id="" placeholder="请输入批次" value="{{ $param['batch'] ?? '' }}">
                                                 </div>
                                                 <div class="form-group">
+                                                    <label class="sr-only" for="exampleInputEmail2">备注</label>
+                                                    <input type="text" class="form-control" name="remark" id="" placeholder="请输入备注" value="{{ $param['remark'] ?? '' }}">
+                                                </div>
+                                                <div class="form-group">
                                                     <label class="sr-only" for="exampleInputPassword2">时间范围</label>
                                                     <input type="text" class="form-control"  name="start_time" autocomplete="off" id="start" placeholder="请输入起始时间" value="{{ $param['start_time'] ?? '' }}">
                                                     -
@@ -84,6 +88,7 @@
                                                         <th>批号</th>
                                                         <th>金额</th>
                                                         <th>工序生产日期</th>
+                                                        <th>备注</th>
                                                         <th>操作</th>
                                                     </tr>
                                                     </thead>
@@ -102,6 +107,15 @@
                                                                         <a href="javascript:;" class="label label-info setData" data-id="{{ $value->id }}" data-type="time" data-key="produce_time">设置</a>
                                                                     @else
                                                                         未
+                                                                    @endif
+                                                                @endif
+                                                            </td>
+                                                            <td>
+                                                                @if($value->remark)
+                                                                    {{ $value->remark }}
+                                                                @else
+                                                                    @if(in_array('admin.salary.setData',$jur))
+                                                                        <a href="javascript:;" class="label label-info setData" data-id="{{ $value->id }}" data-type="text" data-key="remark">设置</a>
                                                                     @endif
                                                                 @endif
                                                             </td>

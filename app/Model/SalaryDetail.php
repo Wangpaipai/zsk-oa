@@ -58,7 +58,7 @@ class SalaryDetail extends Model
 	{
 		$data['start_time'] = isset($data['start_time']) && $data['start_time'] ? strtotime($data['start_time']) : 0;
 		$data['end_time'] = isset($data['end_time']) && $data['end_time'] ? strtotime($data['end_time']) : 0;
-		$field = ['t.id','t.summary_id','t.type','t.money','t.produce_time','t1.contract_no','t1.batch','t1.receipt_time'];
+		$field = ['t.id','t.summary_id','t.type','t.money','t.produce_time','t1.contract_no','t1.batch','t1.receipt_time','t.remark'];
 		return $this
 			->from('salary_detail as t')
 			->leftJoin('summary as t1','t.summary_id','=','t1.id')
@@ -74,6 +74,9 @@ class SalaryDetail extends Model
 				}else{
 					$query->whereBetween('t1.receipt_time',[$data['start_time'],$data['end_time']]);
 				}
+			})
+			->when(isset($data['remark']) && $data['remark'],function($query)use($data){
+				$query->where('t1.batch','like','%' .$data['remark'] . '%');
 			})
 			->where('t.type',$data['type'])
 			->orderBy('t1.receipt_time','desc')
