@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="483d6f7a-1f2a-437c-9c65-cba2df1814c5" name="默认的" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/SalaryDetail.php" afterPath="$PROJECT_DIR$/app/Model/SalaryDetail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" afterPath="$PROJECT_DIR$/resources/views/admin/salary/index.blade.php" />
     </list>
     <ignored path="Deliver.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -29,8 +27,8 @@
       <file leaf-file-name="SalaryDetailController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SalaryDetailController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.892858">
-              <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+            <state vertical-scroll-proportion="-21.035715">
+              <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
               <folding>
                 <element signature="e#128#164#0#PHP" expanded="true" />
               </folding>
@@ -51,8 +49,8 @@
       <file leaf-file-name="SalaryDetail.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Model/SalaryDetail.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.44226328">
-              <caret line="60" column="131" selection-start-line="60" selection-start-column="131" selection-end-line="60" selection-end-column="131" />
+            <state vertical-scroll-proportion="0.81524247">
+              <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -61,8 +59,8 @@
       <file leaf-file-name="index.blade.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/index.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="23.357143">
-              <caret line="46" column="156" selection-start-line="46" selection-start-column="156" selection-end-line="46" selection-end-column="156" />
+            <state vertical-scroll-proportion="-15.321428">
+              <caret line="46" column="156" selection-start-line="46" selection-start-column="150" selection-end-line="46" selection-end-column="156" />
               <folding>
                 <marker date="1550654037177" expanded="true" signature="12585:13329" placeholder="..." />
                 <marker date="1550654037177" expanded="true" signature="12585:13545" placeholder="..." />
@@ -1039,8 +1037,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/resources/views/admin/salary/index.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="23.357143">
-          <caret line="46" column="156" selection-start-line="46" selection-start-column="156" selection-end-line="46" selection-end-column="156" />
+        <state vertical-scroll-proportion="-15.321428">
+          <caret line="46" column="156" selection-start-line="46" selection-start-column="150" selection-end-line="46" selection-end-column="156" />
           <folding>
             <marker date="1550654037177" expanded="true" signature="12585:13329" placeholder="..." />
             <marker date="1550654037177" expanded="true" signature="12585:13545" placeholder="..." />
@@ -1072,8 +1070,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Admin/SalaryDetailController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.892858">
-          <caret line="57" column="36" selection-start-line="57" selection-start-column="36" selection-end-line="57" selection-end-column="36" />
+        <state vertical-scroll-proportion="-21.035715">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
           <folding>
             <element signature="e#128#164#0#PHP" expanded="true" />
           </folding>
@@ -1082,8 +1080,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/SalaryDetail.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.44226328">
-          <caret line="60" column="131" selection-start-line="60" selection-start-column="131" selection-end-line="60" selection-end-column="131" />
+        <state vertical-scroll-proportion="0.81524247">
+          <caret line="78" column="40" selection-start-line="78" selection-start-column="40" selection-end-line="78" selection-end-column="40" />
           <folding />
         </state>
       </provider>

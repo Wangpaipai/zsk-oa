@@ -76,7 +76,7 @@ class SalaryDetail extends Model
 				}
 			})
 			->when(isset($data['remark']) && $data['remark'],function($query)use($data){
-				$query->where('t1.batch','like','%' .$data['remark'] . '%');
+				$query->where('t1.remark','like','%' .$data['remark'] . '%');
 			})
 			->where('t.type',$data['type'])
 			->orderBy('t1.receipt_time','desc')
